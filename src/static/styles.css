@@ -82,8 +82,8 @@ section h3 {
 }
 
 .participants-list {
-  list-style: disc;
-  margin: 8px 0 0 18px;
+  list-style: none;
+  margin: 8px 0 0 0;
   padding: 0;
   max-height: 120px;
   overflow-y: auto;
@@ -99,15 +99,30 @@ section h3 {
   align-items: center;
 }
 
-/* small dot before each participant to give an avatar-like feel */
-.participant-item::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: linear-gradient(135deg, #6a8cff, #2ea6ff);
-  border-radius: 50%;
-  margin-right: 8px;
+/* participant item layout */
+.participant-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.participant-email {
+  color: #444;
+  font-size: 14px;
+  flex: 1 1 auto;
+}
+
+.delete-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 6px;
+}
+
+.delete-participant:hover {
+  color: #8b0000;
 }
 
 /* fallback when no participants exist */
